@@ -13,6 +13,20 @@ namespace SistemaUnica
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+
+            routes.MapRoute(
+             "sobre",
+            "sobre",
+            new { controller = "Home", action = "About" }
+            );
+
+            routes.MapRoute(
+             "contato",
+            "contato",
+            new { controller = "Home", action = "contact" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
